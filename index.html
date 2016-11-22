@@ -172,13 +172,24 @@
 			if (typeof(Storage) !== "undefined") {
 				console.log("email is .. " + localStorage.email);
 				console.log("password is .. " + localStorage.password);
-
-				document.getElementById("emailInput").value = localStorage.email;
-				document.getElementById("passwordInput").value = localStorage.password;
+				if (localStorage.email != null) {
+					document.getElementById("emailInput").value = localStorage.email;
+				} else {
+					document.getElementById("emailInput").placeholder = "EMAIL";
+				}
+				if (localStorage.password != null) {
+					document.getElementById("passwordInput").value = localStorage.password;
+				} else {
+					document.getElementById("passwordInput").placeholder = "PASSWORD";
+				}
+				// document.getElementById("emailInput").value = localStorage.email;
+				// document.getElementById("passwordInput").value = localStorage.password;
 
 			} else {
 				// Sorry! No Web Storage support..
 				alert('This browser does NOT support local storage');
+				// document.getElementById("emailInput").placeholder = "EMAIL";
+				// document.getElementById("passwordInput").placeholder = "PASSWORD";
 			}
 
 		}
