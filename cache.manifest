@@ -1,5 +1,5 @@
 CACHE MANIFEST
-# version - 14.013
+# version - 14.016
 
 CACHE:
 
@@ -19,6 +19,7 @@ img/icon-114x114.png
 img/startup-320x460.png
 img/startup-640x920.png
 img/startup-640x1096.png
+img/home.png
 
 # HTML FILES
 index.html

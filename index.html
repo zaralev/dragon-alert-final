@@ -30,13 +30,16 @@
 	<!-- PAGE CONTENT -->
 
 	<div id="mobile">
-		<div id="login"> <img src="img/logo.png" /><br>
+		<div id="login">
+<h1>DragonALERT</h1>
+			<img src="img/logo.png" /><br>
 
 			<input type="text" name="email" id="emailInput" placeholder="EMAIL">
 			<input type="password" name="password" id="passwordInput" placeholder="PASSWORD">
 			<input type="submit" value="LOGIN" onclick="submitLogin()">
 
 		</div>
+		<div id="homeLogo"><img src="img/home.png" onclick="showHome()" /></div>
 		<div id="header"><img src="img/logo.png" onclick="showCredits()" style="cursor:pointer;" /></div>
 
 		<div id="credits">
@@ -114,7 +117,7 @@
 				<ul>
 					<li>Call 911?</li>
 					<li onclick="getElementById('emergency').style.display = 'none'">No</li>
-					<a href="tel:+1-0">
+					<a href="tel:+1-555-555-5555">
 						<li>Yes</li>
 					</a>
 				</ul>
@@ -127,7 +130,7 @@
 				<ul>
 					<li>Call a Drexel Escort?</li>
 					<li onclick="getElementById('escort').style.display = 'none'">No</li>
-					<a href="tel:+1-0">
+					<a href="tel:+1-555-555-5555">
 						<li>Yes</li>
 					</a>
 				</ul>
@@ -166,6 +169,10 @@
 			localStorage.setItem("password", password.value);
 
 			document.getElementById("login").style.display = 'none';
+		}
+
+		function showHome() {
+			document.getElementById("login").style.display = 'block';
 		}
 
 		function readData() {
